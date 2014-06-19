@@ -1,0 +1,325 @@
+@import url('css/font-awesome.css');
+body {
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+}
+
+.category {
+  font-weight: bold;
+  font-size: 14px;
+  border-bottom: 1px solid, #000;
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* root element for css-accordion. decorated with rounded borders and gradient background image */
+#accordion {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+}
+/* accordion header */
+#accordion h2 {
+    line-height: 14px;
+    padding:0;
+    font-size:14px;
+    font-weight: bold;
+    cursor:pointer;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    clear: both;
+}
+#accordion h2:before{
+	content: "+ ";
+}
+#accordion h2.current {
+    cursor:pointer;
+    margin: 0;
+    padding: 0;
+}
+#accordion h2.current:before{
+	content: "- ";
+}
+/* accordion pane */
+#accordion .pane {
+    display:none;
+    color:#000;
+    font-size:12px;
+}
+
+/* a title inside pane */
+#accordion .pane h3 {
+    font-weight:normal;
+    margin:0;
+    font-size:16px;
+    color:#999;
+}	
+/*------------------------------------------------ Variations -----------------------------------------------*/
+/*------------------------------------------------ Style 1 ------------------------------------------------*/
+.style1 #accordion h2{
+	background: rgb(255,255,255); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,255,255,1) 39%, rgba(241,241,241,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(39%,rgba(255,255,255,1)), color-stop(100%,rgba(241,241,241,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 39%,rgba(241,241,241,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,255,255,1) 39%,rgba(241,241,241,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,255,255,1) 39%,rgba(241,241,241,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(255,255,255,1) 39%,rgba(241,241,241,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f1f1f1',GradientType=0 ); /* IE6-9 */
+	border: 1px solid #F1F1F1;
+	height: 40px;
+    line-height: 40px;
+    margin: 0 0 5px 0;
+}
+.style1 #accordion h2:before {
+	font-family: FontAwesome;
+	content: "\f067";
+	border-right: 1px solid #F1F1F1;
+	display: inline-block;
+	color: #bbb;
+	padding: 0 15px;
+	margin: 0  15px 0 0;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+.style1 #accordion h2.current:before {
+	font-family: FontAwesome;
+	content: "\f068";
+	color: #F2472D;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+.style1 #accordion h2:after{
+	content: "";
+}
+.style1 #accordion .pane{
+	padding:15px 15px 15px 50px;
+}
+/*------------------------------------------------ Style 2 ------------------------------------------------*/
+.style2 #accordion h2{
+	height: 40px;
+    line-height: 45px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.style2 #accordion h2:before {
+	margin-right: 15px;
+	font-size: 20px;
+	font-family: FontAwesome;
+	content: "\f055";
+	display: inline-block;
+	color: #333;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+.style2 #accordion h2.current:before {
+	font-family: FontAwesome;
+	content: "\f056";
+	color: #F2472D;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+.style2 #accordion h2:after{
+	content: "";
+}
+.style2 #accordion .pane{
+	padding:0px 15px 5px 32px;
+}
+
+/*------------------------------------------------ Style 3 ------------------------------------------------*/
+.style3 #accordion h2{
+	height: 40px;
+    line-height: 40px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+.style3 #accordion h2:before {
+	background: #333;
+	padding: 6px 7px 5px 6px;
+	margin-right: 15px;
+	line-height: 12px;
+	font-size: 12px;
+	font-family: FontAwesome;
+	content: "\f067";
+	display: inline-block;
+	color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+.style3 #accordion h2.current:before {
+	background: #F2472D;
+	font-family: FontAwesome;
+	content: "\f068";
+	color: #FFF;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: inherit;
+	-webkit-font-smoothing: antialiased;
+}
+.style3 #accordion h2:after{
+	content: "";
+}
+.style3 #accordion .pane{
+	padding:0px 15px 5px 40px;
+}
+
+/* root element for tabs  ------------------------------------------------------------------------------*/
+ul.tabs {
+    list-style:none;
+    margin:0 !important;
+    padding:0;
+    border-bottom:1px solid #666;
+    height:30px;
+}
+
+/* single tab */
+ul.tabs li {
+    float:left;
+    text-indent:0;
+    padding:0;
+    margin:0 !important;
+    list-style-image:none !important;
+}
+
+/* link inside the tab. uses a background image */
+ul.tabs a {
+    background: url(img/blue.png) no-repeat -420px 0;
+    font-size:11px;
+    display:block;
+    height: 30px;
+    line-height:30px;
+    width: 134px;
+    text-align:center;
+    text-decoration:none;
+    color:#333;
+    padding:0px;
+    margin:0px;
+    position:relative;
+    top:1px;
+}
+
+ul.tabs a:active {
+    outline:none;
+}
+
+/* when mouse enters the tab move the background image */
+ul.tabs a:hover {
+    background-position: -420px -31px;
+    color:#fff;
+}
+
+/* active tab uses a class name "current". its highlight is also done by moving the background image. */
+ul.tabs a.current, ul.tabs a.current:hover, ul.tabs li.current a {
+    background-position: -420px -62px;
+    cursor:default !important;
+    color:#000 !important;
+}
+
+/* tab pane styling */
+.panes div {
+    display:none;
+    padding:15px 10px;
+    border:1px solid #999;
+    border-top:0;
+    height:100px;
+    font-size:14px;
+    background-color:#fff;
+}
+
+/* Different widths for tabs: use a class name: w1, w2, w3 or w2 */
+
+
+/* width 1 */
+ul.tabs a.s { background-position: -553px 0; width:81px; }
+ul.tabs a.s:hover { background-position: -553px -31px; }
+ul.tabs a.s.current  { background-position: -553px -62px; }
+
+/* width 2 */
+ul.tabs a.l { background-position: -248px -0px; width:174px; }
+ul.tabs a.l:hover { background-position: -248px -31px; }
+ul.tabs a.l.current { background-position: -248px -62px; }
+
+
+/* width 3 */
+ul.tabs a.xl { background-position: 0 -0px; width:248px; }
+ul.tabs a.xl:hover { background-position: 0 -31px; }
+ul.tabs a.xl.current { background-position: 0 -62px; }
+
+
+/* initially all panes are hidden */
+.panes .pane {
+    display:none;
+}
+
+
+/* root element for css tabs  -------------------------------------------------------------------------*/
+ul.css-tabs {
+    margin:0 !important;
+    padding:0;
+    height:30px;
+    border-bottom:1px solid #666;
+}
+
+/* single tab */
+ul.css-tabs li {
+    float:left;
+    padding:0;
+    margin:0;
+    list-style-type:none;
+}
+
+/* link inside the tab. uses a background image */
+ul.css-tabs a {
+    float:left;
+    font-size:13px;
+    display:block;
+    padding:5px 30px;
+    text-decoration:none;
+    border:1px solid #666;
+    border-bottom:0px;
+    height:18px;
+    background-color:#efefef;
+    color:#777;
+    margin-right:2px;
+    position:relative;
+    top:1px;
+    outline:0;
+    -moz-border-radius:4px 4px 0 0;
+}
+
+ul.css-tabs a:hover {
+    background-color:#F7F7F7;
+    color:#333;
+}
+
+/* selected tab */
+ul.css-tabs a.current {
+    background-color:#ddd;
+    border-bottom:1px solid #ddd;
+    color:#000;
+    cursor:default;
+}
+
+
+/* tab pane */
+.css-panes div {
+    display:none;
+    border:1px solid #666;
+    border-width:0 1px 1px 1px;
+    min-height:150px;
+    padding:15px 20px;
+    background-color:#ddd;
+}
+
+
